@@ -41,7 +41,7 @@ int main()
 
     int absoluteBitPos = 0;
     int bitFrame = 0;
-    int bitFrameInterval = 500;
+    int bitFrameInterval = 2000;
     Time lastBitFrameRenew = time;
 
     bool callibrating = true;

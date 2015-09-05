@@ -10,9 +10,11 @@ using namespace cv;
 class Checker
 {
     public:
+        Checker();
         Checker(int x, int y);
         std::string getBits();
         void checkPixel(Mat* frame);
+        void printRGB();
     protected:
     private:
         int r = 0;
