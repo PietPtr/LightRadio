@@ -3,6 +3,7 @@
 
 #include <opencv2/core/core.hpp>        // Basic OpenCV structures (cv::Mat, Scalar)
 #include <opencv2/highgui/highgui.hpp>  // OpenCV window I/O
+#include <opencv2/imgproc/imgproc.hpp>
 
 using namespace cv;
 
@@ -32,6 +33,7 @@ int main(int argc, char* argv[])
     while( cap.isOpened() )
     {
         Mat frame;
+
         cap.read(frame);
 
         std::string bits = "";
@@ -64,7 +66,7 @@ int main(int argc, char* argv[])
             break;
         if (k == 10)
         {
-            for (int i = 0; i < totalBits.length(); i+=8)
+            for (int i = 3; i < totalBits.length() - 3; i+=8)
             {
                 int value = 0;
                 for (int b = 7; b >= 0; b--)
